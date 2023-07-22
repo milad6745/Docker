@@ -34,9 +34,10 @@ docker run nginx
 
 ## دیدن کانتینر های در حال اجرا
 
+
 ‍‍‍```
 docker ps -a
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
 3f3a23a43420   nginx     "/docker-entrypoint.…"   7 seconds ago    Exited (0) 3 seconds ago              thirsty_payne
 ```
-
+##
