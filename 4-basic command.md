@@ -25,10 +25,12 @@ python        latest    c0e63845ae98   5 weeks ago    1.01GB
 hello-world   latest    9c7a54a9a43c   2 months ago   13.3kB
 ```
 ## اجرا کردن یک ایمیج
+
 ‍‍‍‍‍‍```
 docker run nginx
 ```
 ## دیدن کانتینر های در حال اجرا
+
 ‍‍‍```
 docker ps -a
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
