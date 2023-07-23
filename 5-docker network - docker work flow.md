@@ -29,7 +29,6 @@ NETWORK ID     NAME            DRIVER    SCOPE
 حال کانتیتر مونگو را ایجاد میکنیم.
 
 ‍‍‍```
-
 docker run -d \
 -p 27020:27020 \
 -e MONGO_INITDB_ROOT_USERNAME=admin \
@@ -37,9 +36,7 @@ docker run -d \
 --network mongo-network \
 --name mongodb \
 mongo
-
-```
-
+‍‍‍‍‍‍```
 سپس برای بررسی لاگ کانتینر را میخانیم.
 
 ```
