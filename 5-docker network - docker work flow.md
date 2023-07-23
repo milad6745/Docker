@@ -29,21 +29,19 @@ NETWORK ID     NAME            DRIVER    SCOPE
 حال کانتیتر مونگو را ایجاد میکنیم.
 
 ‍‍‍```
-docker run -d \
--p 27020:27020 \
--e MONGO_INITDB_ROOT_USERNAME=admin \
--e MONGO_INITDB_ROOT_PASSWORD=password \
---network mongo-network \
---name mongodb \
+docker run -d 
+-p 27020:27020 
+-e MONGO_INITDB_ROOT_USERNAME=admin 
+-e MONGO_INITDB_ROOT_PASSWORD=password 
+--network mongo-network 
+--name mongodb 
 mongo
 ‍‍‍‍‍‍```
 سپس برای بررسی لاگ کانتینر را میخانیم.
 
 ```
-
 docker logs mongodb
 {"t":{"$date":"2023-07-23T14:16:42.075+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
-
 ```
 حال کانتینر مونگو اکسپرس را ایجاد میکنیم.
 
