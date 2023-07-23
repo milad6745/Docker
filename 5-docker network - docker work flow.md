@@ -15,3 +15,11 @@ bbb799d57d6a   bridge    bridge    local
 725fbe0ae5e3   host      host      local
 74c4c321a5bc   none      null      local
 ```
+حال ما باید نتورک خودمان را برای این ارتباط ایجاد کنیم.
+```
+docker network create mongo-network
+
+docker network ls
+NETWORK ID     NAME            DRIVER    SCOPE
+671c5c9ccc7f   mongo-network   bridge    local
+```
