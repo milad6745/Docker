@@ -7,7 +7,9 @@
 docker pull mongo
 docker pull mongo-express
 ```
+
 برای این کار باید مونگو و مونگو اکسپرس و nodejs ما داخل یک شبکه باشد . که میبایست اینگونه عمل کنیم .
+
 ```
 docker network ls
 NETWORK ID     NAME      DRIVER    SCOPE
@@ -15,15 +17,17 @@ bbb799d57d6a   bridge    bridge    local
 725fbe0ae5e3   host      host      local
 74c4c321a5bc   none      null      local
 ```
+
 حال ما باید نتورک خودمان را برای این ارتباط ایجاد کنیم.
 ```
 docker network create mongo-network
-
 docker network ls
 NETWORK ID     NAME            DRIVER    SCOPE
 671c5c9ccc7f   mongo-network   bridge    local
 ```
+
 حال کانتیتر مونگو را ایجاد میکنیم.
+
 ‍‍‍```
 docker run -d \
 -p 27020:27020 \
@@ -33,12 +37,17 @@ docker run -d \
 --name mongodb \
 mongo
 ```
-سپس برای بررسی لاگ کانتینر را میخانیم
+
+سپس برای بررسی لاگ کانتینر را میخانیم.
+
 ```
+
 docker logs mongodb
 {"t":{"$date":"2023-07-23T14:16:42.075+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+
 ```
 حال کانتینر مونگو اکسپرس را ایجاد میکنیم.
+
 ```
 docker run -d  \
     --network mongo-network \
@@ -49,6 +58,7 @@ docker run -d  \
     -e ME_CONFIG_BASICAUTH_PASSWORD=password \
     mongo-express
 ```
+
 سپس برای بررسی اتصال لاگ را مشاهده میکنیم.
 
 ## docker-compose
@@ -94,6 +104,7 @@ Creating root_mongodb_1       ... done
 
 
 و در نهایت مونگو اکسپری ایجاد میشود.
+
 
 ![Screenshot from 2023-07-23 23-00-38](https://github.com/milad-baousi/Docker/assets/113288076/56355638-d2fa-419a-b04f-6dafd692f5dc)
 
