@@ -1,4 +1,4 @@
-## pull docker images and run container
+![image](https://github.com/milad-baousi/Docker/assets/113288076/8ef26284-eec9-44c1-8aeb-9b7e269182e7)## pull docker images and run container
 
 ```
 docker run potgres
@@ -58,7 +58,7 @@ docker stop <container id>
 docker start <container id>
 ```
 
-## وقتی دو بار یک سرویس را اجرا میکنیم چه اتفاقی میافتد .
+## وقتی چند بار یک سرویس را اجرا میکنیم چه اتفاقی میافتد .
 ```
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS          PORTS      NAMES
 55e85af7018c   redis     "docker-entrypoint.s…"   5 minutes ago    Up 5 minutes    6379/tcp   zealous_colden
@@ -77,3 +77,16 @@ docker ps -a
 b2899d44680f   redis     "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds               0.0.0.0:6000->6379/tcp   elegant_sino
 ```
 
+## خواندن لاگ کانتینر ها
+```
+docker logs 0c54dd1d2d05
+```
+
+## ایجاد کانتینر با اسم دلخواه
+```
+docker run -d -p 9000:6779 --name redis_new redis
+
+docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                   PORTS                              NAMES
+ab50ad3d70c0   redis     "docker-entrypoint.s…"   About a minute ago   Up About a minute        6379/tcp, 0.0.0.0:9000->6779/tcp   redis_new
+```
