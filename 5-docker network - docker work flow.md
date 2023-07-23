@@ -75,12 +75,16 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: password
       ME_CONFIG_MONGODB_SERVER: mongodb 
 ```
+
 اجرا کردن داکر کامپوز :
+
 ‍‍‍```
 docker-compose up -f
 docker-compose -f filename up
 ```
+
 خال متوجه میشویم که ما وقتی نام شبکه را قرار ندادیم یک شبکه به نام my app default ایجاد کرده است .
+
 ```
 docker network ls
 Creating network "root_default" with the default driver
@@ -88,7 +92,8 @@ Creating root_mongo-express_1 ... done
 Creating root_mongodb_1       ... done
 ```
 
-و در نهایت مونگو اکسپری ایجاد میشود
+
+و در نهایت مونگو اکسپری ایجاد میشود.
 
 ![Screenshot from 2023-07-23 23-00-38](https://github.com/milad-baousi/Docker/assets/113288076/56355638-d2fa-419a-b04f-6dafd692f5dc)
 
