@@ -90,3 +90,14 @@ docker ps -a
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS                   PORTS                              NAMES
 ab50ad3d70c0   redis     "docker-entrypoint.s…"   About a minute ago   Up About a minute        6379/tcp, 0.0.0.0:9000->6779/tcp   redis_new
 ```
+
+## دریافت شل کانتینر در حال اجرا
+
+```
+docker exec -it redis_new /bin/bash
+```
+این مورد برای این است که مثلا شما کانفیگ ها را چک کنید یا بررسی مشکلات سرویس نیاز میشود که شل کانتینر را بگیرید.
+
+## تفاوت docker run , docker start  در چیست ؟
+ران با ایمیج ها و کانتینر ها کار میکند در صورتی که ایمیج موجود  نباشد دانلود میکند
+داکر استارت با کانتینر ها کار میکند
