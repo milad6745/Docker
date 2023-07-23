@@ -23,3 +23,32 @@ docker network ls
 NETWORK ID     NAME            DRIVER    SCOPE
 671c5c9ccc7f   mongo-network   bridge    local
 ```
+حال کانتیتر مونگو را ایجاد میکنیم.
+‍‍‍```
+docker run -d \
+-p 27020:27020 \
+-e MONGO_INITDB_ROOT_USERNAME=admin \
+-e MONGO_INITDB_ROOT_PASSWORD=password \
+--network mongo-network \
+--name mongodb \
+mongo
+```
+سپس برای بررسی لاگ کانتینر را میخانیم
+```
+docker logs mongodb
+{"t":{"$date":"2023-07-23T14:16:42.075+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+```
+حال کانتینر مونگو اکسپرس را ایجاد میکنیم.
+```
+docker run -d  \
+    --network mongo-network \
+    --name mongo-express \
+    -p 8081:8081 \
+    -e ME_CONFIG_MONGODB_SERVER=mongodb \        
+    -e ME_CONFIG_BASICAUTH_USERNAME=admin \
+    -e ME_CONFIG_BASICAUTH_PASSWORD=password \
+    mongo-express
+```
+سپس برای بررسی اتصال لاگ را مشاهده میکنیم.
+
+
