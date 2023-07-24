@@ -32,10 +32,11 @@ For example:
 ```
 docker tag your_docker_image your_hostname.local:5000/your_docker_image
 docker push your_hostname.local:5000/your_docker_image
+```
 
 ## Pulling from a Local Docker Registry
 Pulling is similarly simple.
-```
+
 ```
 docker pull your_hostname.local:5000/your_docker_image
 ```
