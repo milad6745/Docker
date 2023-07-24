@@ -4,4 +4,28 @@
 
 **چه زمانی از داکر والیوم استفاده میکنیم**
 وقتی میخواهیم کانتینر را پاک کنیم یا ریستارت کنیم دیتای داخل آن از بین میرود و به حالت اول برمیگردد و اینجاست که به داکر والیوم نیاز پیدا میکنیم .
+وقتی کانتینر با فایل های والیوم شده کار دارد آنها را از هاست خود دریافت میکند .
+
+**Docker volume Types**
+1- host volume :
+docker run -v /home/mount/data:/var/lib/mysql/data
+شما تصمیم میگیرید از کدام دایرکتوری به کجا والیوم شود.
+
+2- anonymous volume
+
+
+3-named volume
+
+
+**docker compose volume**
+```
+services:
+  frontend:
+    image: node:lts
+    volumes:
+      - myapp:/home/node/app
+volumes:
+  myapp:
+    external: true
+```
 
