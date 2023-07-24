@@ -22,3 +22,11 @@ services:
                 ME_CONFIG_MONGODB_ADMINPASSWORD: password
                 ME_CONFIG_MONGODB_SERVER: mongodb
 ```
+برای اجرای داکر کامپوز از دستور زیر استفاده میکنیم
+```
+docker-compose up -d
+```
+برای اینکه کارهایی که داکر کامپوز انجام داده را از بین ببریم و استاپ کنیم 
+```
+docker-compose down
+```
