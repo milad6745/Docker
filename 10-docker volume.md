@@ -7,6 +7,7 @@
 وقتی کانتینر با فایل های والیوم شده کار دارد آنها را از هاست خود دریافت میکند .
 
 **Docker volume Types**
+
 1- host volume :
 docker run -v /home/mount/data:/var/lib/mysql/data
 شما تصمیم میگیرید از کدام دایرکتوری به کجا والیوم شود.
@@ -28,4 +29,9 @@ volumes:
   myapp:
     external: true
 ```
-
+```
+ docker run -d \
+  --name devtest \
+  -v myvol2:/app \
+  nginx:latest
+```
