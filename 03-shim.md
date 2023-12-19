@@ -1,4 +1,5 @@
 Shim 
+
 در مفهوم Docker یک عامل واسط بین Docker Daemon و Containerd است. در واقع، shim نقش یک adapter یا ترجمه‌گر (translator) را ایفا می‌کند. به طور کلی، این شامل دو قسمت اصلی است:
 
 1. **Shim Process (پردازه Shim):** این یک پردازه کوچک است که به عنوان واسط بین Docker Daemon و Containerd عمل می‌کند. پردازه shim از Docker Daemon درخواست‌هایی را که نیاز به تعامل با کانتینر دارد دریافت کرده و این درخواست‌ها را به زبانی قابل درک برای Containerd ترجمه می‌کند.
