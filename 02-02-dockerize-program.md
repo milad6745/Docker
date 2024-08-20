@@ -77,5 +77,17 @@ docker build -t my-docker-app .
 ```bash
 docker run -d -p 5000:5000 my-docker-app
 ```
+OR
+```yml
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "500:5000"
+```
 
 حالا اپلیکیشن شما در داخل یک کانتینر Docker در حال اجراست و می‌توانید از طریق مرورگر وارد آدرس http://localhost:5000 شوید تا پیام "Hello, Docker!" را مشاهده کنید.
