@@ -1,4 +1,4 @@
-![image](https://github.com/milad-baousi/Docker/assets/113288076/8ef26284-eec9-44c1-8aeb-9b7e269182e7)## pull docker images and run container
+## pull docker images and run container
 
 ```
 docker run potgres
