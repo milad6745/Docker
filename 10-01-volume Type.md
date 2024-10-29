@@ -54,3 +54,12 @@
 - **tmpfs Mounts** مناسب داده‌های موقتی و کش‌های سریع هستند.
 
 هر کدام از این والیوم‌ها برای نیازهای خاصی طراحی شده‌اند و انتخاب آن‌ها بستگی به نوع و اهمیت داده‌ها در محیط اجرایی Docker دارد.
+
+
+docker volume Manage volumes:
+
+• docker volume create: Create a volume
+• docker volume inspect: Display detailed information
+• docker volume ls: List volumes
+• docker volume prune: Remove all unused local volumes
+• docker volume rm: Remove one or more volumes
