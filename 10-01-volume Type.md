@@ -59,7 +59,11 @@
 docker volume Manage volumes:
 
 • docker volume create: Create a volume
+
 • docker volume inspect: Display detailed information
+
 • docker volume ls: List volumes
+
 • docker volume prune: Remove all unused local volumes
+
 • docker volume rm: Remove one or more volumes
