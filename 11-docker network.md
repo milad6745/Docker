@@ -129,3 +129,21 @@ network bridge:
 عملکرد: شبکه host ممکن است کمی سریع‌تر باشد، زیرا نیازی به NAT بین میزبان و کانتینر نیست.
     
 امنیت: شبکه bridge معمولاً امن‌تر است زیرا کانتینرها به‌طور پیش‌فرض از شبکه میزبان ایزوله هستند.
+
+
+
+Network Management Commands:
+در ادامه کامند لاین Network رو می‌بینید که بهتون کمک می‌کنه تا نتورک‌ها رو مدیریت کنیم.
+docker network connect: Connect a container to a network
+
+docker network create: Create a network
+
+docker network disconnect: Disconnect a container from a network
+
+docker network inspect: Display detailed information
+
+docker network ls: List networks
+
+docker network prune: Remove all unused networks
+
+docker network rm: Remove one or more networks
