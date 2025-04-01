@@ -1,4 +1,3 @@
-عالیه! بریم سراغ **Load Balancing و Ingress Networking**. ⚖️🌐
 
 ---
 
