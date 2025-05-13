@@ -63,5 +63,3 @@ docker pull localhost:5000/my-image:latest
 برای امنیت، باید nginx یا reverse proxy مثل Traefik استفاده کنی و یک فایل `htpasswd` برای یوزر و پسورد.
 
 ---
-
-آیا مایل هستی Registryت رو با SSL و یوزر/پسورد امن کنیم؟
